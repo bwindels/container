@@ -39,7 +39,7 @@ order is not important, matching of arguments is done only by name, optional arg
 ####Container.add(name, value)
 Add a value to the container with ```name```. ```value``` can be a *creator function* that returns the dependency value through a callback. The argument has to be called callback, and the creator function can specify any number of other arguments that should match other dependencies in the container. In other words, creator functions are also dependency injected, with a special extra argument called callback.
 
-The callback accepts to arguments, the first being an error if one occured or null if not, and the second one the value of the dependency if no error occurred.
+The callback accepts two arguments, the first being an error if one occured or null if not, and the second one the value of the dependency if no error occurred.
 
 ```
 container.add('a', function(anotherDependency, callback) {
